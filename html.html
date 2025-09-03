@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>JS Compiler</title>
+  <title>HTML Compiler</title>
   <style>
-    body {
+  body {
   font-family: Arial, sans-serif;
   display: flex;
   height: 100vh;
@@ -41,27 +41,17 @@ button {
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.14/codemirror.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.14/theme/dracula.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.14/codemirror.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.14/mode/javascript/javascript.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.14/mode/xml/xml.min.js"></script>
 </head>
 <body>
   <button onclick="runCode()">Run</button>
-  <textarea id="editor">
-<html>
-<body>
-  <h1 id="msg">Hello JS</h1>
-  <script>
-    document.getElementById("msg").style.color = "blue";
-    console.log("JavaScript is running!");
-  </script>
-</body>
-</html>
-  </textarea>
+  <textarea id="editor"><h1>Hello HTML</h1></textarea>
   <iframe id="output"></iframe>
 
   <script>
     const cm = CodeMirror.fromTextArea(document.getElementById("editor"), {
       lineNumbers: true,
-      mode: "javascript",
+      mode: "xml",
       theme: "dracula"
     });
 

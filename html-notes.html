@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Complete HTML Reference | Codcups</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .notes-container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    .notes-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .notes-header h1 {
+      font-size: 2rem;
+      margin: .3rem 0;
+    }
+    .notes-header h1 span {
+      background: linear-gradient(90deg,var(--accentA),var(--accentB));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .notes-section {
+      margin-bottom: 2.5rem;
+    }
+    .notes-section h2 {
+      font-size: 1.4rem;
+      margin: 1rem 0 .6rem;
+      border-left: 4px solid var(--primaryB);
+      padding-left: .6rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      background: var(--panel);
+      border: 1px solid var(--outline);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: .75rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--outline);
+    }
+    th {
+      background: linear-gradient(90deg,var(--primaryA),var(--primaryB));
+      color: #08111f;
+      font-weight: 700;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    tr:nth-child(even) td {
+      background: rgba(255,255,255,.03);
+    }
+  </style>
+</head>
+<body>
+
+ <!-- Header -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.svg" alt="YourExperties logo">
+        <span>YourExperties</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+      <nav class="nav-links">
+        <a href="index.html#tutorials">Tutorials</a>
+        <a href="./notes.html">Notes</a>
+        <a href="index.html#compilers">Compilers</a>
+        <a href="index.html#features">Features</a>
+        <a href="about.html">About</a>
+        <a class="btn btn-cta" href="contact.html">Contact</a>
+        <a class="btn btn-primary" href="signup.html">Signup</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Notes Content -->
+  <div class="notes-container">
+    <div class="notes-header">
+      <h1><span>Complete HTML Reference</span></h1>
+      <p style="color:var(--muted)">
+        A quick reference for HTML elements including structure, formatting, media, forms, semantics and scripting tags.
+      </p>
+    </div>
+
+    <!-- Section 1 -->
+    <div class="notes-section">
+      <h2>1. Basic Structure Tags</h2>
+      <table>
+        <tr><th>Tag</th><th>Description</th></tr>
+        <tr><td>&lt;!DOCTYPE&gt;</td><td>Defines the document type</td></tr>
+        <tr><td>&lt;html&gt;</td><td>Root element of HTML document</td></tr>
+        <tr><td>&lt;head&gt;</td><td>Contains metadata/information</td></tr>
+        <tr><td>&lt;title&gt;</td><td>Specifies the document title</td></tr>
+        <tr><td>&lt;body&gt;</td><td>Contains visible page content</td></tr>
+      </table>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="notes-section">
+      <h2>2. Text Formatting Tags</h2>
+      <table>
+        <tr><th>Tag</th><th>Description</th></tr>
+        <tr><td>&lt;h1&gt; - &lt;h6&gt;</td><td>Headings</td></tr>
+        <tr><td>&lt;p&gt;</td><td>Paragraph</td></tr>
+        <tr><td>&lt;br&gt;</td><td>Line break</td></tr>
+        <tr><td>&lt;strong&gt;</td><td>Bold (strong importance)</td></tr>
+        <tr><td>&lt;em&gt;</td><td>Italic (emphasis)</td></tr>
+        <tr><td>&lt;mark&gt;</td><td>Highlight text</td></tr>
+        <tr><td>&lt;sub&gt;</td><td>Subscript</td></tr>
+        <tr><td>&lt;sup&gt;</td><td>Superscript</td></tr>
+      </table>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="notes-section">
+      <h2>3. Links, Media & Embeds</h2>
+      <table>
+        <tr><th>Tag</th><th>Description</th></tr>
+        <tr><td>&lt;a&gt;</td><td>Anchor (hyperlink)</td></tr>
+        <tr><td>&lt;img&gt;</td><td>Image</td></tr>
+        <tr><td>&lt;video&gt;</td><td>Video</td></tr>
+        <tr><td>&lt;audio&gt;</td><td>Audio</td></tr>
+        <tr><td>&lt;iframe&gt;</td><td>Embed another page</td></tr>
+        <tr><td>&lt;object&gt;</td><td>Embed external object</td></tr>
+      </table>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="notes-section">
+      <h2>4. List Tags</h2>
+      <table>
+        <tr><th>Tag</th><th>Description</th></tr>
+        <tr><td>&lt;ul&gt;</td><td>Unordered list</td></tr>
+        <tr><td>&lt;ol&gt;</td><td>Ordered list</td></tr>
+        <tr><td>&lt;li&gt;</td><td>List item</td></tr>
+        <tr><td>&lt;dl&gt;</td><td>Definition list</td></tr>
+        <tr><td>&lt;dt&gt;</td><td>Definition term</td></tr>
+        <tr><td>&lt;dd&gt;</td><td>Term description</td></tr>
+      </table>
+    </div>
+
+    <!-- Section 5 -->
+    <div class="notes-section">
+      <h2>5. Table Tags</h2>
+      <table>
+        <tr><th>Tag</th><th>Description</th></tr>
+        <tr><td>&lt;table&gt;</td><td>Table container</td></tr>
+        <tr><td>&lt;tr&gt;</td><td>Table row</td></tr>
+        <tr><td>&lt;th&gt;</td><td>Table header</td></tr>
+        <tr><td>&lt;td&gt;</td><td>Table cell</td></tr>
+        <tr><td>&lt;thead&gt;</td><td>Head section</td></tr>
+        <tr><td>&lt;tfoot&gt;</td><td>Footer section</td></tr>
+      </table>
+    </div>
+
+    <!-- Section 6 -->
+    <div class="notes-section">
+      <h2>6. Forms & Input</h2>
+      <table>
+        <tr><th>Tag</th><th>Description</th></tr>
+        <tr><td>&lt;form&gt;</td><td>Form container</td></tr>
+        <tr><td>&lt;input&gt;</td><td>Input field</td></tr>
+        <tr><td>&lt;textarea&gt;</td><td>Multi-line input</td></tr>
+        <tr><td>&lt;button&gt;</td><td>Button</td></tr>
+        <tr><td>&lt;select&gt;</td><td>Dropdown menu</td></tr>
+        <tr><td>&lt;label&gt;</td><td>Form label</td></tr>
+        <tr><td>&lt;fieldset&gt;</td><td>Group inputs</td></tr>
+      </table>
+    </div>
+
+    <!-- Section 7 -->
+    <div class="notes-section">
+      <h2>7. Semantic HTML5 Tags</h2>
+      <table>
+        <tr><th>Tag</th><th>Description</th></tr>
+        <tr><td>&lt;header&gt;</td><td>Top of page/section</td></tr>
+        <tr><td>&lt;footer&gt;</td><td>Bottom of page/section</td></tr>
+        <tr><td>&lt;nav&gt;</td><td>Navigation</td></tr>
+        <tr><td>&lt;main&gt;</td><td>Main content</td></tr>
+        <tr><td>&lt;section&gt;</td><td>Section content</td></tr>
+        <tr><td>&lt;article&gt;</td><td>Independent content</td></tr>
+        <tr><td>&lt;aside&gt;</td><td>Sidebar</td></tr>
+      </table>
+    </div>
+
+    <!-- Section 8 -->
+    <div class="notes-section">
+      <h2>8. Scripting & Metadata</h2>
+      <table>
+        <tr><th>Tag</th><th>Description</th></tr>
+        <tr><td>&lt;script&gt;</td><td>JavaScript code</td></tr>
+        <tr><td>&lt;noscript&gt;</td><td>Fallback if JS disabled</td></tr>
+        <tr><td>&lt;link&gt;</td><td>External CSS</td></tr>
+        <tr><td>&lt;style&gt;</td><td>Internal CSS</td></tr>
+        <tr><td>&lt;meta&gt;</td><td>Metadata</td></tr>
+      </table>
+    </div>
+
+    <!-- Section 9 -->
+    <div class="notes-section">
+      <h2>9. Other Tags</h2>
+      <table>
+        <tr><th>Tag</th><th>Description</th></tr>
+        <tr><td>&lt;div&gt;</td><td>Block-level container</td></tr>
+        <tr><td>&lt;span&gt;</td><td>Inline container</td></tr>
+        <tr><td>&lt;canvas&gt;</td><td>Draw graphics</td></tr>
+        <tr><td>&lt;svg&gt;</td><td>Vector graphics</td></tr>
+      </table>
+    </div>
+
+    <!-- Back -->
+    <p style="margin-top:2rem; text-align:center;">
+      <a href="notes.html" class="btn btn-primary">⬅ Back to Notes</a>
+    </p>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand small">
+          <img src="assets/logo.svg" alt="Logo">
+          <span>YourExperties</span>
+        </div>
+        <p>© <span id="year"></span> YourExperties. Use your own content. Layout inspired for learning purposes.</p>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#tutorials">Tutorials</a></li>
+          <li><a href="#compilers">Compilers</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <ul>
+          <li><a href="#">GitHub</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

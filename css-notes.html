@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Complete CSS Reference</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .notes-container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    .notes-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .notes-header h1 {
+      font-size: 2rem;
+      margin: .3rem 0;
+    }
+    .notes-header h1 span {
+      background: linear-gradient(90deg,var(--accentA),var(--accentB));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .notes-section {
+      margin-bottom: 2.5rem;
+    }
+    .notes-section h2 {
+      font-size: 1.4rem;
+      margin: 1rem 0 .6rem;
+      border-left: 4px solid var(--primaryB);
+      padding-left: .6rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      background: var(--panel);
+      border: 1px solid var(--outline);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: .75rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--outline);
+    }
+    th {
+      background: linear-gradient(90deg,var(--primaryA),var(--primaryB));
+      color: #08111f;
+      font-weight: 700;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    tr:nth-child(even) td {
+      background: rgba(255,255,255,.03);
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.svg" alt="YourExperties logo">
+        <span>YourExperties</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+      <nav class="nav-links">
+        <a href="index.html#tutorials">Tutorials</a>
+        <a href="./notes.html">Notes</a>
+        <a href="index.html#compilers">Compilers</a>
+        <a href="index.html#features">Features</a>
+        <a href="about.html">About</a>
+        <a class="btn btn-cta" href="contact.html">Contact</a>
+        <a class="btn btn-primary" href="signup.html">Signup</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="notes-container">
+    <div class="notes-header">
+      <h1><span>Complete CSS Reference’s</span></h1>
+      <p style="color:var(--muted)">
+        Quick notes for CSS selectors, keywords, properties, units and media queries
+      </p>
+    </div>
+
+    <!-- Section 1 -->
+    <div class="notes-section">
+      <h2>1. CSS Selectors</h2>
+      <table>
+        <tr><th>Selector</th><th>Description</th></tr>
+        <tr><td>*</td><td>Universal selector (all elements)</td></tr>
+        <tr><td>element</td><td>Type selector (e.g. div, p)</td></tr>
+        <tr><td>.class</td><td>Class selector</td></tr>
+        <tr><td>#id</td><td>ID selector</td></tr>
+        <tr><td>element element</td><td>Descendant selector</td></tr>
+        <tr><td>element &gt; element</td><td>Child selector</td></tr>
+        <tr><td>element + element</td><td>Adjacent sibling selector</td></tr>
+        <tr><td>element ~ element</td><td>General sibling selector</td></tr>
+        <tr><td>[attribute]</td><td>Attribute selector</td></tr>
+        <tr><td>:hover</td><td>Pseudo-class for hover</td></tr>
+        <tr><td>::before / ::after</td><td>Pseudo-elements for adding content</td></tr>
+      </table>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="notes-section">
+      <h2>2. CSS Keywords</h2>
+      <table>
+        <tr><th>Keyword</th><th>Use</th></tr>
+        <tr><td>inherit</td><td>Inherit value from parent element</td></tr>
+        <tr><td>initial</td><td>Default value as defined by browser</td></tr>
+        <tr><td>unset</td><td>Resets property to inherited or default</td></tr>
+        <tr><td>auto</td><td>Let the browser calculate value</td></tr>
+        <tr><td>none</td><td>Disable property (e.g. display, border)</td></tr>
+        <tr><td>block / inline</td><td>Display type</td></tr>
+        <tr><td>flex / grid</td><td>Display type</td></tr>
+        <tr><td>relative / absolute / fixed / sticky</td><td>Position types</td></tr>
+        <tr><td>transparent</td><td>Color keyword</td></tr>
+      </table>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="notes-section">
+      <h2>3. Common CSS Properties</h2>
+      <table>
+        <tr><th>Property</th><th>Description</th></tr>
+        <tr><td>color</td><td>Text color</td></tr>
+        <tr><td>background-color / background-image</td><td>Background styling</td></tr>
+        <tr><td>width / height</td><td>Size of element</td></tr>
+        <tr><td>padding / margin</td><td>Spacing around element</td></tr>
+        <tr><td>border</td><td>Border of element</td></tr>
+        <tr><td>font-size / font-family / font-weight</td><td>Font styling</td></tr>
+        <tr><td>text-align / vertical-align</td><td>Text alignment</td></tr>
+        <tr><td>line-height</td><td>Line spacing</td></tr>
+        <tr><td>display</td><td>Element display type</td></tr>
+        <tr><td>position / top / left</td><td>Positioning</td></tr>
+        <tr><td>z-index</td><td>Stack order</td></tr>
+        <tr><td>overflow</td><td>Content overflow control</td></tr>
+        <tr><td>visibility / opacity</td><td>Element visibility</td></tr>
+        <tr><td>box-shadow / text-shadow</td><td>Shadow effects</td></tr>
+        <tr><td>transform / animation / transition</td><td>Transform & animations</td></tr>
+      </table>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="notes-section">
+      <h2>4. CSS Value Units</h2>
+      <table>
+        <tr><th>Unit</th><th>Description</th></tr>
+        <tr><td>px</td><td>Pixels (absolute unit)</td></tr>
+        <tr><td>%</td><td>Percentage (relative unit)</td></tr>
+        <tr><td>em</td><td>Relative to parent font size</td></tr>
+        <tr><td>rem</td><td>Relative to root font size</td></tr>
+        <tr><td>vh / vw</td><td>Viewport height/width</td></tr>
+        <tr><td>fr</td><td>Fractional unit (grid)</td></tr>
+      </table>
+    </div>
+
+    <!-- Section 5 -->
+    <div class="notes-section">
+      <h2>5. Media Queries (Responsive CSS)</h2>
+      <table>
+        <tr><th>Syntax</th><th>Description</th></tr>
+        <tr><td>@media screen and (max-width: 600px)</td><td>Applies CSS on small screens</td></tr>
+        <tr><td>@media print</td><td>Applies when printing</td></tr>
+        <tr><td>@media only screen and (min-width: 768px)</td><td>Tablet or desktop view</td></tr>
+      </table>
+    </div>
+  </div>
+
+   <!-- Back -->
+    <p style="margin-top:2rem; text-align:center;">
+      <a href="notes.html" class="btn btn-primary">⬅ Back to Notes</a>
+    </p>
+  </div>
+
+<!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand small">
+          <img src="assets/logo.svg" alt="Logo">
+          <span>YourExperties</span>
+        </div>
+        <p>© <span id="year"></span> YourExperties. Use your own content. Layout inspired for learning purposes.</p>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#tutorials">Tutorials</a></li>
+          <li><a href="#compilers">Compilers</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <ul>
+          <li><a href="#">GitHub</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

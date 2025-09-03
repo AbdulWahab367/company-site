@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete Java Programming Course | Codcups</title>
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    :root{
+      --bg:#0b0f17;
+      --panel:#0f172a;
+      --text:#ecf3ff;
+      --muted:#a9b3c1;
+      --outline: rgba(255,255,255,.12);
+      --primaryA: #7c3aed;
+      --primaryB: #06b6d4;
+      --primaryC: #22d3ee;
+      --accentA: #f43f5e;
+      --accentB: #a3e635;
+      --shadow: 0 14px 40px rgba(0,0,0,.45);
+    }
+
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif}
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+    ul{margin:0;padding-left:1.1rem}
+    .container{max-width:1160px;margin:0 auto;padding:0 1rem}
+
+    .site-header{position:sticky;top:0;z-index:50;background:linear-gradient(180deg,rgba(11,15,23,.9),rgba(11,15,23,.4));backdrop-filter:blur(10px);border-bottom:1px solid var(--outline)}
+    .nav{display:flex;align-items:center;justify-content:space-between;padding:.9rem 0}
+    .brand{display:inline-flex;align-items:center;gap:.6rem;font-weight:800;letter-spacing:.2px}
+    .brand img{width:30px;height:30px}
+    .nav-links{display:flex;align-items:center;gap:.6rem}
+    .nav-links a{padding:.55rem .8rem;border-radius:12px}
+    .nav-links a:hover{background:rgba(255,255,255,.08)}
+    .nav-links a.active{background:rgba(255,255,255,.15)}
+    .nav-toggle{display:none;background:transparent;border:1px solid var(--outline);color:var(--text);padding:.4rem .6rem;border-radius:10px}
+
+    .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.8rem 1rem;border-radius:14px;border:1px solid var(--outline);cursor:pointer}
+    .btn-primary {
+  border: none;
+  background: linear-gradient(135deg, var(--primaryA), var(--primaryB), var(--primaryC));
+  color: #08111f;
+  box-shadow: var(--shadow);
+  font-weight: 700;
+  transition: all 0.3s ease-in-out;  /* 👈 smooth animation */
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px) scale(1.05);
+  background: linear-gradient(135deg, var(--accentA), var(--accentB)); /* new colors */
+  color: #fff;
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.6);
+}
+
+
+    .hero{position:relative;padding:4rem 0 2.5rem;overflow:hidden}
+    .hero-inner{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center}
+    .hero .chip{display:inline-block;padding:.35rem .6rem;border:1px solid var(--outline);border-radius:999px;font-size:.8rem;color:var(--muted)}
+    .hero h1{font-size:clamp(1.9rem,4vw,3.2rem);line-height:1.15;margin:.8rem 0}
+    .hero h1 span{background:linear-gradient(90deg,var(--accentA),var(--accentB));-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero p{color:var(--muted);font-size:1.06rem}
+    .hero-actions{display:flex;gap:.8rem;margin-top:1.1rem}
+    .hero-media{background:linear-gradient(180deg,#0d1220,#0a0e17);border:1px solid var(--outline);padding:1rem;border-radius:22px;box-shadow:var(--shadow)}
+    .hero-gradient{position:absolute;inset:auto -10% -20% -10%;height:50vh;background:radial-gradient(60% 60% at 50% 0%, rgba(124,58,237,.25), transparent), radial-gradient(40% 40% at 80% 10%, rgba(6,182,212,.25), transparent);filter:blur(40px);pointer-events:none}
+
+    .section{padding:2.7rem 0}
+    .section.alt{background:linear-gradient(180deg,rgba(255,255,255,.03),rgba(255,255,255,0))}
+    .section-title{font-size:clamp(1.4rem,2.5vw,2rem);margin:0 0 .6rem}
+
+    .card{background:var(--panel);border:1px solid var(--outline);padding:1.1rem;border-radius:18px;box-shadow:var(--shadow)}
+    .card-outline{outline:2px dashed rgba(255,255,255,.1);margin-top:1rem}
+    .card code, pre{background:#0a0f1a;border:1px solid var(--outline);border-radius:12px;padding:1rem;overflow:auto;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:.92rem;display:block;color:#fff}
+
+    .site-footer{padding:2rem 0;border-top:1px solid var(--outline);color:var(--muted)}
+    .footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr;gap:1rem}
+    .footer-grid h4{margin:.4rem 0 .2rem;color:var(--text)}
+
+    @media (max-width:1000px){
+      .hero-inner{grid-template-columns:1fr}
+    }
+    @media (max-width:640px){
+      .nav-toggle{display:inline-flex}
+      .nav-links{display:none;position:absolute;right:1rem;top:64px;background:var(--panel);border:1px solid var(--outline);border-radius:12px;padding:.6rem;flex-direction:column;gap:.2rem;box-shadow:var(--shadow)}
+      .nav-links.show{display:flex}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.svg" alt="YourExperties logo">
+        <span>YourExperties</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+      <nav class="nav-links">
+        <a href="index.html#tutorials">Tutorials</a>
+        <a href="./notes.html">Notes</a>
+        <a href="index.html#compilers">Compilers</a>
+        <a href="index.html#features">Features</a>
+        <a href="about.html">About</a>
+        <a class="btn btn-cta" href="contact.html">Contact</a>
+        <a class="btn btn-primary" href="signup.html">Signup</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div>
+        <div class="chip">Complete Java Programming Course</div>
+        <h1><span>Java Programming</span> Masterclass</h1>
+        <p>Learn Java step by step with notes and code examples.</p>
+        <div class="hero-actions">
+          <a href="https://www.youtube.com/watch?v=yRpLlJmRo2w&list=PLfqMhTWNBTe3LtFWcvwpqTkUSlB32kJop" class="btn btn-primary" target="_blank">Start Learning</a>
+          <strong><p>←Tutorial Lecture</p></strong>
+        </div>
+      </div>
+      <div class="hero-media">
+        <img src="assets/java-banner.jpeg" alt="Java Banner" />
+      </div>
+    </div>
+    <div class="hero-gradient"></div>
+  </section>
+
+  <!-- Introduction to Java -->
+  <section class="section" id="intro">
+    <div class="container card">
+      <h2 class="section-title">🔹 Introduction to Java</h2>
+      <p>Java is a popular, class-based, object-oriented programming language designed to have as few implementation dependencies as possible. It is widely used for building enterprise-scale applications, mobile apps, and more.</p>
+      <ul>
+        <li>Platform Independent</li>
+        <li>Object-Oriented</li>
+        <li>Secure and Robust</li>
+        <li>High Performance</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Setting Up Java Environment -->
+  <section class="section alt">
+    <div class="container card">
+      <h2 class="section-title">🔹 Setting Up Java Environment</h2>
+      <p>To start programming in Java:</p>
+      <ul>
+        <li>Install JDK (Java Development Kit).</li>
+        <li>Set up environment variables.</li>
+        <li>Use an IDE like IntelliJ IDEA, Eclipse, or VS Code.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Your First Java Program -->
+  <section class="section">
+    <div class="container card">
+      <h2 class="section-title">🔹 Your First Java Program</h2>
+      <pre><code>public class HelloWorld {
+  public static void main(String[] args) {
+    System.out.println("Hello, World!");
+  }
+}</code></pre>
+    </div>
+  </section>
+
+  <!-- Java Variables and Data Types -->
+  <section class="section alt">
+    <div class="container card">
+      <h2 class="section-title">🔹 Java Variables and Data Types</h2>
+      <pre><code>int number = 10;
+String name = "John";
+boolean isJavaFun = true;</code></pre>
+      <p>Java provides different types of variables, for example:</p>
+      <ul>
+        <li><code>int</code> - stores integers</li>
+        <li><code>double</code> - stores floating-point numbers</li>
+        <li><code>String</code> - stores text</li>
+        <li><code>boolean</code> - stores true/false</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Operators in Java -->
+  <section class="section">
+    <div class="container card">
+      <h2 class="section-title">🔹 Operators in Java</h2>
+      <pre><code>int x = 5 + 10; // Addition
+int y = 20 - 5; // Subtraction
+int z = 4 * 3;  // Multiplication
+int w = 20 / 4; // Division</code></pre>
+    </div>
+  </section>
+
+  <!-- Conditional Statements -->
+  <section class="section alt">
+    <div class="container card">
+      <h2 class="section-title">🔹 Conditional Statements</h2>
+      <pre><code>int age = 18;
+if (age >= 18) {
+  System.out.println("You are an adult.");
+} else {
+  System.out.println("You are not an adult.");
+}</code></pre>
+    </div>
+  </section>
+
+  <!-- Switch Statement -->
+  <section class="section">
+    <div class="container card">
+      <h2 class="section-title">🔹 Switch Statement</h2>
+      <pre><code>int day = 3;
+switch (day) {
+  case 1:
+    System.out.println("Monday");
+    break;
+  case 2:
+    System.out.println("Tuesday");
+    break;
+  case 3:
+    System.out.println("Wednesday");
+    break;
+  default:
+    System.out.println("Other day");
+}</code></pre>
+    </div>
+  </section>
+
+  <!-- Loops in Java -->
+  <section class="section alt">
+    <div class="container card">
+      <h2 class="section-title">🔹 Loops in Java</h2>
+      <pre><code>for (int i = 1; i <= 5; i++) {
+  System.out.println(i);
+}</code></pre>
+      <pre><code>int i = 1;
+while (i <= 5) {
+  System.out.println(i);
+  i++;
+}</code></pre>
+    </div>
+  </section>
+
+  <!-- Functions (Methods) -->
+  <section class="section">
+    <div class="container card">
+      <h2 class="section-title">🔹 Functions (Methods)</h2>
+      <pre><code>public class MyClass {
+  static void myMethod() {
+    System.out.println("Hello from method!");
+  }
+
+  public static void main(String[] args) {
+    myMethod();
+  }
+}</code></pre>
+    </div>
+  </section>
+  <!-- Video Section -->
+<section class="video-section">
+  <div class="container">
+    <h2  class="section-title">Watch Tutorial</h2>
+    <p class="section-sub">Learn how to create a website step by step.</p>
+
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/ECoIdyfcObE" 
+        title="YouTube video"
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand small">
+          <img src="assets/logo.svg" alt="Logo">
+          <span>YourExperties</span>
+        </div>
+        <p>© <span id="year"></span> YourExperties. Use your own content. Layout inspired for learning purposes.</p>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#tutorials">Tutorials</a></li>
+          <li><a href="#compilers">Compilers</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <ul>
+          <li><a href="#">GitHub</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

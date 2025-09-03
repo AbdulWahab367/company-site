@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>YourExperties — Learn • Code • Run</title>
+  <meta name="description" content="YourExperties: Learn programming with funky visuals, sharp contrast, and online compilers.">
+  <link rel="icon" href="assets/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+  .card-glow {
+  position: relative; /* required for ::after border */
+  
+}
+.card {
+  position: relative; /* important for glow borders */
+  transition: all 0.3s ease-in-out;
+  
+}
+
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  border: 1px solid #38bdf8; /* glowing border on hover */
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+}
+.btn-ghost {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 2px solid #4cafef;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #4cafef;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-ghost:hover {
+  background-color: #4cafef;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.btn-primary {
+  border: none !important;
+  background: linear-gradient(135deg, var(--primaryA), var(--primaryB), var(--primaryC)) !important;
+  color: #08111f !important;
+  box-shadow: var(--shadow) !important;
+  font-weight: 700 !important;
+  transition: all 0.3s ease-in-out !important;  /* 👈 smooth animation */
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px) scale(1.05) !important;
+  background: linear-gradient(135deg, var(--accentA), var(--accentB)) !important; /* new colors */
+  color: #fff !important;
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.6) !important;
+}
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.svg" alt="YourExperties logo">
+        <span>YourExperties</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+      <nav class="nav-links">
+        <a href="#tutorials">Tutorials</a>
+        <a href="./notes.html">Notes</a>
+        <a href="#compilers">Compilers</a>
+        <a href="#features">Features</a>
+        <a href="#about">About</a>
+        <a class="btn btn-cta" href="#contact">Contact</a>
+        <a class="btn btn-primary" href="signup.html">Signup</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <!-- Hero -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <span class="chip">100% Free • Beginner Friendly</span>
+          <h1 class="glow">Code smarter with <span>YourExperties</span>.</h1>
+          <p>Learn popular languages with crisp lessons, funky visuals, and instant compilers — all in your browser.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#tutorials">Explore Tutorials</a>
+            <a class="btn btn-ghost" href="#compilers">Run Code Online</a>
+          </div>
+          <ul class="hero-bullets">
+            <li>Python, C/C++, Java, JS, PHP, SQL & more</li>
+            <li>Mobile‑friendly, fast, no install needed</li>
+            <li>Accessible color contrast & keyboard nav</li>
+          </ul>
+        </div>
+        <div class="hero-media card">
+          <img src="assets/Front.webp" alt="Funky code editor preview">
+        </div>
+      </div>
+      <div class="hero-gradient"></div>
+    </section>
+
+    <!-- Tutorials / Languages Grid -->
+    <section id="tutorials" class="section">
+      <div class="container">
+        <h2 class="section-title">Tutorials</h2>
+        <p class="section-sub">Pick a language to start learning.</p>
+        <div class="grid cards-3">  
+          <a href="python.html" >
+          <div class="notes-box">
+            <article class="card card-glow">
+            <div class="card-top">
+              <img class="card-banner" src="assets/python.jpg" alt="Python">
+              <h3>Python</h3>
+            </div>
+            <p>Beginner to advanced with hands‑on practice.</p>
+           <h3 class="btn btn-ghost"> Start Python </h3>
+          </article>
+          </div>
+          </a>
+          <a href="cpp.html">
+          <div class="notes-box">
+          <article class="card card-glow">
+            <div class="card-top">
+              <img class="card-banner" src="assets/C++.jpeg" alt="C++">
+              <h3>C++</h3>
+            </div>
+            <p>Master syntax, OOP, STL, and patterns.</p>
+            <h3 class="btn btn-ghost">Start C++</h3>
+          </article>
+          </div> </a>
+          <a href="java.html">
+          <div class="notes-box">
+          <article class="card card-glow">
+            <div class="card-top">
+              <img class="card-banner" src="assets/java.png" alt="Java">
+              <h3>Java</h3>
+            </div>
+            <p>From basics to collections & concurrency.</p>
+            <h3 class="btn btn-ghost">Start Java</h3>
+          </article>
+          </div></a>
+          <a href="js.html">
+          <div class="notes-box">
+          <article class="card card-glow">
+            <div class="card-top">
+              <img class="card-banner" src="assets/javascript.jpg" alt="JavaScript">
+              <h3>JavaScript</h3>
+            </div>
+            <p>ESNext, DOM, fetch, async, projects.</p>
+            <h3 class="btn btn-ghost">Start JavaScript</h3>
+          </article>
+          </div></a>
+          <a href="php.html">
+          <div class="notes-box">
+          <article class="card card-glow">
+            <div class="card-top">
+              <img class="card-banner" src="assets/php.jpg" alt="PHP">
+              <h3>PHP</h3>
+            </div>
+            <p>Server‑side apps, forms, sessions, PDO.</p>
+            <h3 class="btn btn-ghost">Start PHP</h3>
+          </article>
+          </div></a>
+          <a href="sql.html">
+          <div class="notes-box">
+          <article class="card card-glow">
+            <div class="card-top">
+              <img class="card-banner" src="assets/SQL.jpg" alt="SQL">
+              <h3>SQL</h3>
+            </div>
+            <p>Queries, joins, indexes, transactions.</p>
+            <h3 class="btn btn-ghost">Start SQL</h3>
+          </article>
+          </div></a>
+          <a href="HTML.html">
+          <div class="notes-box">
+          <article class="card card-glow">
+            <div class="card-top">
+              <img class="card-banner" src="assets/HTML.jpeg" alt="HTML">
+              <h3>HTML</h3>
+            </div>
+            <p>Pointers, memory, files, data structures.</p>
+            <h3 class="btn btn-ghost">Start HTML</h3>
+          </article>
+          </div></a>
+          <a href="css.html">
+          <div class="notes-box">
+          <article class="card card-glow">
+            <div class="card-top">
+              <img class="card-banner" src="assets/CSS.jpeg" alt="CSS">
+              <h3>CSS</h3>
+            </div>
+            <p>.NET, LINQ, async/await, desktop/web.</p>
+            <h3 class="btn btn-ghost">Start CSS</h3>
+          </article>
+          </div></a>
+        </div>
+      </div>
+    </div>
+    </section>
+    
+    <!-- Video Section -->
+<section class="video-section">
+  <div class="container">
+    <h2  class="section-title">Watch Tutorial</h2>
+    <p class="section-sub">Learn how to create a website step by step.</p>
+
+    <div class="video-wrapper">
+      <iframe src="https://www.youtube.com/embed/CQZxeoQeo5c" 
+        title="YouTube video"
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  </div>
+</section>
+
+    <!-- Compilers -->
+    <section id="compilers" class="section alt">
+  <div class="container">
+    <h2 class="section-title">Try Our Compilers</h2>
+    <p class="section-sub">Practice coding directly in your browser</p>
+
+    <div class="grid cards-4">
+
+      <div class="card card-glow">
+        <a href="compiler/html.html">
+          <h3>HTML Compiler</h3>
+          <p class="hint">Write, edit and run HTML code instantly.</p>
+        </a>
+      </div>
+    
+      <div class="card card-glow">
+        <a href="compiler/css.html">
+          <h3>CSS Compiler</h3>
+          <p class="hint">Experiment with styles and designs.</p>
+        </a>
+      </div>
+
+      <div class="card card-glow">
+        <a href="compiler/js.html">
+          <h3>JavaScript Compiler</h3>
+          <p class="hint">Test your scripts with real-time output.</p>
+        </a>
+      </div>
+
+      <div class="card card-glow">
+        <a href="compiler/python.html">
+          <h3>Python Compiler</h3>
+          <p class="hint">Write Python code and see the results instantly.</p>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- Features -->
+    <section id="features" class="section">
+      <div class="container">
+        <h2 class="section-title">Why YourExperties?</h2>
+        <div class="grid cards-3">
+          <article class="card feature">
+            <h3>Funky & Accessible</h3>
+            <p>Neon gradients with WCAG‑conscious contrast for readability.</p>
+          </article>
+          <article class="card feature">
+            <h3>Fast & Responsive</h3>
+            <p>Mobile‑first layout, fluid grids, and GPU‑friendly effects.</p>
+          </article>
+          <article class="card feature">
+            <h3>Learn by Doing</h3>
+            <p>Short lessons paired with runnable examples and exercises.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="section alt">
+      <div class="container about">
+        <div>
+          <h2 class="section-title">About YourExperties</h2>
+          <p>YourExperties is a learning space built to make coding playful, practical, and accessible. We focus on simple explanations, vibrant visuals, and hands‑on practice so beginners feel at home and pros stay engaged.</p>
+          <ul class="ticks">
+            <li>Clear roadmaps for each language</li>
+            <li>Project‑based learning</li>
+            <li>Community‑first mindset</li>
+          </ul>
+        </div>
+        <div class="card about-media">
+          <img src="assets/AboutImage.png" alt="Students learning to code">
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2 class="section-title">Contact us</h2>
+        <form class="contact-form" onsubmit="event.preventDefault(); alert('Thanks! This is a demo form.');">
+          <div class="form-row">
+            <input type="text" placeholder="Your name" required>
+            <input type="email" placeholder="Your email" required>
+          </div>
+          <textarea rows="5" placeholder="Your message"></textarea>
+          <button class="btn btn-primary" type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand small">
+          <img src="assets/logo.svg" alt="Logo">
+          <span>YourExperties</span>
+        </div>
+        <p>© <span id="year"></span> YourExperties. Use your own content. Layout inspired for learning purposes.</p>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#tutorials">Tutorials</a></li>
+          <li><a href="#compilers">Compilers</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <ul>
+          <li><a href="#">GitHub</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>

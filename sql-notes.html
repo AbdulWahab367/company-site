@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Complete SQL Reference | Codcups</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .notes-container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    .notes-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .notes-header h1 {
+      font-size: 2rem;
+      margin: .3rem 0;
+    }
+    .notes-header h1 span {
+      background: linear-gradient(90deg,var(--accentA),var(--accentB));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .notes-section {
+      margin-bottom: 2.5rem;
+    }
+    .notes-section h2 {
+      font-size: 1.4rem;
+      margin: 1rem 0 .6rem;
+      border-left: 4px solid var(--primaryB);
+      padding-left: .6rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      background: var(--panel);
+      border: 1px solid var(--outline);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: .75rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--outline);
+    }
+    th {
+      background: linear-gradient(90deg,var(--primaryA),var(--primaryB));
+      color: #08111f;
+      font-weight: 700;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    tr:nth-child(even) td {
+      background: rgba(255,255,255,.03);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.svg" alt="YourExperties logo">
+        <span>YourExperties</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+      <nav class="nav-links">
+        <a href="index.html#tutorials">Tutorials</a>
+        <a href="./notes.html">Notes</a>
+        <a href="index.html#compilers">Compilers</a>
+        <a href="index.html#features">Features</a>
+        <a href="about.html">About</a>
+        <a class="btn btn-cta" href="contact.html">Contact</a>
+        <a class="btn btn-primary" href="signup.html">Signup</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Notes Content -->
+  <div class="notes-container">
+    <div class="notes-header">
+      <h1><span>Complete SQL Reference</span></h1>
+      <p style="color:var(--muted)">
+        A quick reference for SQL covering keywords, data types, constraints, and common functions.
+      </p>
+    </div>
+
+    <!-- Section 1 -->
+    <div class="notes-section">
+      <h2>1. SQL Keywords</h2>
+      <table>
+        <tr><th>Keyword</th><th>Description</th></tr>
+        <tr><td>SELECT</td><td>Used to select data from a database</td></tr>
+        <tr><td>FROM</td><td>Specifies the table to select or delete data from</td></tr>
+        <tr><td>WHERE</td><td>Filters records</td></tr>
+        <tr><td>INSERT INTO</td><td>Adds new data into a table</td></tr>
+        <tr><td>VALUES</td><td>Provides values for an INSERT</td></tr>
+        <tr><td>UPDATE</td><td>Modifies existing data</td></tr>
+        <tr><td>SET</td><td>Defines new values in UPDATE</td></tr>
+        <tr><td>DELETE</td><td>Deletes data from a table</td></tr>
+        <tr><td>CREATE TABLE</td><td>Creates a new table</td></tr>
+        <tr><td>ALTER TABLE</td><td>Modifies a table structure</td></tr>
+        <tr><td>DROP TABLE</td><td>Deletes a table</td></tr>
+        <tr><td>JOIN</td><td>Combines rows from multiple tables</td></tr>
+        <tr><td>INNER JOIN</td><td>Returns rows with matching values</td></tr>
+        <tr><td>LEFT JOIN</td><td>All rows from left + matched from right</td></tr>
+        <tr><td>RIGHT JOIN</td><td>All rows from right + matched from left</td></tr>
+        <tr><td>FULL JOIN</td><td>All rows from both tables</td></tr>
+        <tr><td>GROUP BY</td><td>Groups rows sharing a property</td></tr>
+        <tr><td>ORDER BY</td><td>Sorts results</td></tr>
+        <tr><td>HAVING</td><td>Filters grouped records</td></tr>
+        <tr><td>AS</td><td>Alias for a column or table</td></tr>
+        <tr><td>DISTINCT</td><td>Returns only distinct values</td></tr>
+        <tr><td>LIMIT</td><td>Specifies number of records to return</td></tr>
+        <tr><td>OFFSET</td><td>Skips number of records</td></tr>
+        <tr><td>IN</td><td>Matches any in a list</td></tr>
+        <tr><td>NOT IN</td><td>Excludes from list</td></tr>
+        <tr><td>LIKE</td><td>Pattern matching</td></tr>
+        <tr><td>IS NULL</td><td>Checks for NULL</td></tr>
+        <tr><td>UNION</td><td>Combines multiple SELECT results</td></tr>
+        <tr><td>CASE</td><td>Conditional logic</td></tr>
+      </table>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="notes-section">
+      <h2>2. SQL Data Types</h2>
+      <table>
+        <tr><th>Type</th><th>Description</th></tr>
+        <tr><td>INT</td><td>Integer (whole number)</td></tr>
+        <tr><td>FLOAT / DOUBLE</td><td>Floating point numbers</td></tr>
+        <tr><td>DECIMAL(p,s)</td><td>Exact numeric value with precision</td></tr>
+        <tr><td>CHAR(n)</td><td>Fixed-length character</td></tr>
+        <tr><td>VARCHAR(n)</td><td>Variable-length character</td></tr>
+        <tr><td>TEXT</td><td>Large text</td></tr>
+        <tr><td>DATE</td><td>YYYY-MM-DD format</td></tr>
+        <tr><td>TIME</td><td>HH:MM:SS format</td></tr>
+        <tr><td>DATETIME</td><td>Date and time</td></tr>
+        <tr><td>BOOLEAN</td><td>TRUE/FALSE values</td></tr>
+      </table>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="notes-section">
+      <h2>3. SQL Constraints</h2>
+      <table>
+        <tr><th>Constraint</th><th>Description</th></tr>
+        <tr><td>PRIMARY KEY</td><td>Uniquely identifies a row</td></tr>
+        <tr><td>FOREIGN KEY</td><td>Links to another table’s primary key</td></tr>
+        <tr><td>UNIQUE</td><td>Ensures unique values</td></tr>
+        <tr><td>NOT NULL</td><td>Value cannot be null</td></tr>
+        <tr><td>DEFAULT</td><td>Sets a default value</td></tr>
+        <tr><td>CHECK</td><td>Ensures condition is true</td></tr>
+        <tr><td>AUTO_INCREMENT</td><td>Auto-increments numeric field</td></tr>
+      </table>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="notes-section">
+      <h2>4. SQL Functions</h2>
+      <table>
+        <tr><th>Function</th><th>Description</th></tr>
+        <tr><td>COUNT()</td><td>Returns number of rows</td></tr>
+        <tr><td>SUM()</td><td>Returns the total sum</td></tr>
+        <tr><td>AVG()</td><td>Returns the average</td></tr>
+        <tr><td>MIN()</td><td>Returns the minimum value</td></tr>
+        <tr><td>MAX()</td><td>Returns the maximum value</td></tr>
+        <tr><td>NOW()</td><td>Returns current datetime</td></tr>
+        <tr><td>UPPER()</td><td>Converts to uppercase</td></tr>
+        <tr><td>LOWER()</td><td>Converts to lowercase</td></tr>
+        <tr><td>ROUND()</td><td>Rounds a number</td></tr>
+        <tr><td>LENGTH()</td><td>Length of a string</td></tr>
+        <tr><td>SUBSTRING()</td><td>Extract part of string</td></tr>
+      </table>
+    </div>
+
+    <!-- Back -->
+    <p style="margin-top:2rem; text-align:center;">
+      <a href="notes.html" class="btn btn-primary">⬅ Back to Notes</a>
+    </p>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand small">
+          <img src="assets/logo.svg" alt="Logo">
+          <span>YourExperties</span>
+        </div>
+        <p>© <span id="year"></span> YourExperties. Use your own content. Layout inspired for learning purposes.</p>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#tutorials">Tutorials</a></li>
+          <li><a href="#compilers">Compilers</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <ul>
+          <li><a href="#">GitHub</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

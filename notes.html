@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Notes | YourExpeerties</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .section-title1 {
+      text-align: center;
+      font-size: xx-large;
+      margin-bottom: 2rem;
+    }
+    .section-title1 {
+      background: linear-gradient(90deg,var(--accentA),var(--accentB));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .section-sub1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .btn-ghost {
+  display: inline-block;
+  padding: 8px 16px;
+  border: 2px solid #4cafef;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #4cafef;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-ghost:hover {
+  background-color: #4cafef;
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.svg" alt="YourExperties logo">
+        <span>YourExperties</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+      <nav class="nav-links">
+        <a href="index.html#tutorials">Tutorials</a>
+        <a href="./notes.html">Notes</a>
+        <a href="index.html#compilers">Compilers</a>
+        <a href="index.html#features">Features</a>
+        <a href="about.html">About</a>
+        <a class="btn btn-cta" href="contact.html">Contact</a>
+        <a class="btn btn-primary" href="signup.html">Signup</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Notes Section -->
+  <section class="section">
+    <div class="container">
+      <h1 class="section-title1">My Coding Notes Collection</h1>
+      <p class="section-sub1">
+        Browse through my curated collection of programming notes covering various topics in web development and software engineering.
+      </p>
+
+      <!-- Search Bar -->
+      <div style="margin:1.5rem 0; display:flex; justify-content:center; gap:.5rem;">
+        <input id="searchInput" type="text" placeholder="Search notes..."
+          style="flex:1; max-width:400px; border-radius:12px; border:1px solid var(--outline); padding:.7rem .9rem; background:#0c1322; color:var(--text);">
+        <button id="searchBtn" class="btn btn-primary">Search</button>
+      </div>
+
+      <!-- Notes Grid -->
+      <div id="grid cards-3" class="grid cards-4">
+
+          <a href="python-notes.html">
+         <div class="notes-box">
+        <div class="card card-glow">
+          <div class="card-top">
+            <img src="assets/a8c934a6bd243de6e63aaf072c69013c.jpg" alt="Python" class="card-banner">
+            <h3>Python Notes</h3>
+          </div>
+          <p class="hint">Understand Python basics, keywords & identifiers.</p>
+          <h3 class="btn btn-ghost">Read More</h3>
+        </div>
+         </div></a>
+
+         <a href="html-notes.html">
+         <div class="notes-box">
+        <div class="card card-glow">
+          <div class="card-top">
+            <img src="assets/aab301aaa113a8610a6fe4ef6cb4e382.jpg" alt="HTML" class="card-banner">
+            <h3>HTML Notes</h3>
+          </div>
+          <p class="hint">Learn all HTML tags and attributes in detail.</p>
+          <h3 class="btn btn-ghost">Read More</h3>
+        </div></div></a>
+
+        <a href="css-notes.html">
+        <div class="notes-box">
+        <div class="card card-glow">
+          <div class="card-top">
+            <img src="assets/fcdaff4d3f30005e462d0d3c31cfb691.jpg" alt="CSS" class="card-banner">
+            <h3>CSS Notes</h3>
+          </div>
+          <p class="hint">Master layouts, flexbox, grid and selectors.</p>
+          <h3 class="btn btn-ghost">Read More</h3>
+        </div></div></a>
+         
+        <a href="js-notes.html">
+        <div class="notes-box">
+        <div class="card card-glow">
+          <div class="card-top">
+            <img src="assets/Java Script Tutorial.png" alt="JS" class="card-banner">
+            <h3>JavaScript Notes</h3>
+          </div>
+          <p class="hint">Asynchronous programming, promises & DOM.</p>
+          <h3 class="btn btn-ghost">Read More</h3>
+        </div></div></a>
+ 
+        <a href="sql-notes.html">
+        <div class="notes-box">
+        <div class="card card-glow">
+          <div class="card-top">
+            <img src="assets/a9d0ecdc69a7a13d5d63675ff4d655c1.jpg" alt="SQL" class="card-banner">
+            <h3>SQL Notes</h3>
+          </div>
+          <p class="hint">Cheat sheet for queries, joins and filters.</p>
+          <h3 class="btn btn-ghost">Read More</h3>
+        </div></div></a>
+
+        <a href="php-notes.html">
+        <div class="notes-box">
+        <div class="card card-glow">
+          <div class="card-top">
+            <img src="assets/bfc24f20e1d558d3c8df6163a3fe61cd.jpg" alt="PHP" class="card-banner">
+            <h3>PHP Notes</h3>
+          </div>
+          <p class="hint">Learn PHP basics for backend development.</p>
+          <h3 class="btn btn-ghost">Read More</h3>
+        </div></div></a>
+
+        <a href="java-notes.html">
+        <div class="notes-box">
+        <div class="card card-glow">
+          <div class="card-top">
+            <img src="assets/Java Tutorial" alt="Java" class="card-banner">
+            <h3>Java Notes</h3>
+          </div>
+          <p class="hint">Empower enterprise solutions through Java.</p>
+          <h3 class="btn btn-ghost">Read More</h3>
+        </div></div></a>
+
+        <a href="C++-notes.html">
+        <div class="notes-box">
+        <div class="card card-glow">
+          <div class="card-top">
+            <img src="assets/C++ Tutorial.jpeg" alt="C++" class="card-banner">
+            <h3>C++ Notes</h3>
+          </div>
+          <p class="hint">Learn C++ for speed and performance.</p>
+          <h3 class="btn btn-ghost">Read More</h3>
+        </div></div></a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand small">
+          <img src="assets/logo.svg" alt="Logo">
+          <span>YourExperties</span>
+        </div>
+        <p>© <span id="year"></span> YourExperties. Use your own content. Layout inspired for learning purposes.</p>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#tutorials">Tutorials</a></li>
+          <li><a href="#compilers">Compilers</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <ul>
+          <li><a href="#">GitHub</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- JavaScript -->
+<script>
+  // --- Mobile nav toggle (safe guard if elements missing) ---
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
+  if (navToggle && navLinks) {
+    navToggle.addEventListener('click', () => navLinks.classList.toggle('show'));
+  }
+
+  // --- Search elements ---
+  const searchInput = document.getElementById('searchInput');
+  const searchBtn = document.getElementById('searchBtn');
+
+  // --- Find the grid robustly (handles id with space) ---
+  let notesGrid = document.getElementById('grid cards-3');
+  if (!notesGrid) {
+    // try escaped selector or other fallbacks
+    notesGrid = document.querySelector('#grid\\ cards-3') || document.getElementById('notesGrid') || document.querySelector('.grid');
+  }
+
+  if (!notesGrid) {
+    console.warn('Notes grid not found. Check the container id/class.');
+  }
+
+  // --- We must hide the grid item wrapper (.notes-box), not inner .card ---
+  const boxes = notesGrid ? notesGrid.getElementsByClassName('notes-box') : [];
+
+  // detect default display of the grid item so we restore correctly
+  const defaultDisplay = boxes.length > 0 ? getComputedStyle(boxes[0]).display : 'block';
+
+  function filterNotes() {
+    if (!searchInput) return;
+    const query = (searchInput.value || '').trim().toLowerCase();
+
+    Array.from(boxes).forEach(box => {
+      const text = box.innerText.toLowerCase();
+      // show all when query is empty
+      if (query === '' || text.includes(query)) {
+        box.style.display = defaultDisplay;
+      } else {
+        box.style.display = 'none';
+      }
+    });
+  }
+
+  // bind events (safe guards)
+  if (searchBtn) searchBtn.addEventListener('click', filterNotes);
+  if (searchInput) {
+    searchInput.addEventListener('keyup', (e) => {
+      filterNotes();
+      if (e.key === 'Enter') filterNotes();
+    });
+  }
+
+  // optional: run once to ensure initial state
+  filterNotes();
+</script>
+
+</body>
+</html>

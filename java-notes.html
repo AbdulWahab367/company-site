@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Complete Java Reference | Codcups</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .notes-container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    .notes-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .notes-header h1 {
+      font-size: 2rem;
+      margin: .3rem 0;
+    }
+    .notes-header h1 span {
+      background: linear-gradient(90deg,var(--accentA),var(--accentB));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .notes-section {
+      margin-bottom: 2.5rem;
+    }
+    .notes-section h2 {
+      font-size: 1.4rem;
+      margin: 1rem 0 .6rem;
+      border-left: 4px solid var(--primaryB);
+      padding-left: .6rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      background: var(--panel);
+      border: 1px solid var(--outline);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: .75rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--outline);
+    }
+    th {
+      background: linear-gradient(90deg,var(--primaryA),var(--primaryB));
+      color: #08111f;
+      font-weight: 700;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    tr:nth-child(even) td {
+      background: rgba(255,255,255,.03);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.svg" alt="YourExperties logo">
+        <span>YourExperties</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+      <nav class="nav-links">
+        <a href="index.html#tutorials">Tutorials</a>
+        <a href="./notes.html">Notes</a>
+        <a href="index.html#compilers">Compilers</a>
+        <a href="index.html#features">Features</a>
+        <a href="about.html">About</a>
+        <a class="btn btn-cta" href="contact.html">Contact</a>
+        <a class="btn btn-primary" href="signup.html">Signup</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Notes Content -->
+  <div class="notes-container">
+    <div class="notes-header">
+      <h1><span>Complete Java Reference</span></h1>
+      <p style="color:var(--muted)">
+        Quick reference for Java covering keywords, data types, access modifiers, operators, and commonly used classes.
+      </p>
+    </div>
+
+    <!-- Section 1 -->
+    <div class="notes-section">
+      <h2>1. Java Keywords</h2>
+      <table>
+        <tr><th>Keyword</th><th>Description</th></tr>
+        <tr><td>abstract</td><td>Specifies that a class or method is abstract</td></tr>
+        <tr><td>assert</td><td>Used for debugging and validating assumptions</td></tr>
+        <tr><td>boolean</td><td>Defines a variable with true/false</td></tr>
+        <tr><td>break</td><td>Exits a loop or switch statement</td></tr>
+        <tr><td>byte</td><td>8-bit integer type</td></tr>
+        <tr><td>case</td><td>Defines a case in a switch statement</td></tr>
+        <tr><td>catch</td><td>Handles exceptions</td></tr>
+        <tr><td>char</td><td>16-bit character type</td></tr>
+        <tr><td>class</td><td>Defines a class</td></tr>
+        <tr><td>continue</td><td>Skips current loop iteration</td></tr>
+        <tr><td>default</td><td>Specifies default in switch statement</td></tr>
+        <tr><td>do</td><td>Starts a do-while loop</td></tr>
+        <tr><td>double</td><td>64-bit floating-point type</td></tr>
+        <tr><td>else</td><td>Defines alternate branch</td></tr>
+        <tr><td>enum</td><td>Defines an enumerated type</td></tr>
+        <tr><td>extends</td><td>Defines inheritance</td></tr>
+        <tr><td>false</td><td>Boolean constant value false</td></tr>
+        <tr><td>final</td><td>Defines constants or prevents overriding</td></tr>
+        <tr><td>finally</td><td>Block always executed after try/catch</td></tr>
+        <tr><td>float</td><td>32-bit floating-point type</td></tr>
+        <tr><td>for</td><td>Starts a for loop</td></tr>
+        <tr><td>if</td><td>Conditional statement</td></tr>
+        <tr><td>implements</td><td>Implements an interface</td></tr>
+        <tr><td>import</td><td>Imports other classes or packages</td></tr>
+        <tr><td>instanceof</td><td>Checks if object is an instance</td></tr>
+        <tr><td>int</td><td>32-bit integer type</td></tr>
+        <tr><td>interface</td><td>Declares an interface</td></tr>
+        <tr><td>long</td><td>64-bit integer type</td></tr>
+        <tr><td>native</td><td>Links to native code</td></tr>
+        <tr><td>new</td><td>Creates new objects</td></tr>
+        <tr><td>null</td><td>Represents a null reference</td></tr>
+        <tr><td>package</td><td>Defines a package</td></tr>
+        <tr><td>private</td><td>Access modifier</td></tr>
+        <tr><td>protected</td><td>Access modifier</td></tr>
+        <tr><td>public</td><td>Access modifier</td></tr>
+        <tr><td>return</td><td>Exits a method and returns a value</td></tr>
+        <tr><td>short</td><td>16-bit integer type</td></tr>
+        <tr><td>static</td><td>Declares static method or variable</td></tr>
+        <tr><td>strictfp</td><td>For consistent floating-point behavior</td></tr>
+        <tr><td>super</td><td>Refers to superclass</td></tr>
+        <tr><td>switch</td><td>Defines multiple branches</td></tr>
+        <tr><td>synchronized</td><td>Controls thread access</td></tr>
+        <tr><td>this</td><td>Refers to current object</td></tr>
+        <tr><td>throw</td><td>Throws an exception</td></tr>
+        <tr><td>throws</td><td>Declares exceptions</td></tr>
+        <tr><td>transient</td><td>Prevents serialization</td></tr>
+        <tr><td>true</td><td>Boolean constant true</td></tr>
+        <tr><td>try</td><td>Defines a block for errors</td></tr>
+        <tr><td>void</td><td>Specifies no return value</td></tr>
+        <tr><td>volatile</td><td>Prevents compiler optimization</td></tr>
+        <tr><td>while</td><td>Starts a while loop</td></tr>
+      </table>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="notes-section">
+      <h2>2. Data Types</h2>
+      <table>
+        <tr><th>Type</th><th>Description</th></tr>
+        <tr><td>int</td><td>32-bit integer</td></tr>
+        <tr><td>long</td><td>64-bit integer</td></tr>
+        <tr><td>float</td><td>32-bit decimal</td></tr>
+        <tr><td>double</td><td>64-bit decimal</td></tr>
+        <tr><td>byte</td><td>8-bit integer</td></tr>
+        <tr><td>short</td><td>16-bit integer</td></tr>
+        <tr><td>char</td><td>16-bit Unicode character</td></tr>
+        <tr><td>boolean</td><td>true or false</td></tr>
+      </table>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="notes-section">
+      <h2>3. Access Modifiers</h2>
+      <table>
+        <tr><th>Modifier</th><th>Description</th></tr>
+        <tr><td>public</td><td>Accessible everywhere</td></tr>
+        <tr><td>private</td><td>Accessible within class only</td></tr>
+        <tr><td>protected</td><td>Accessible within package and subclasses</td></tr>
+        <tr><td>default</td><td>Accessible within the package</td></tr>
+      </table>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="notes-section">
+      <h2>4. Operators</h2>
+      <table>
+        <tr><th>Operator</th><th>Purpose</th></tr>
+        <tr><td>+</td><td>Addition / String concatenation</td></tr>
+        <tr><td>-</td><td>Subtraction</td></tr>
+        <tr><td>*</td><td>Multiplication</td></tr>
+        <tr><td>/</td><td>Division</td></tr>
+        <tr><td>%</td><td>Modulus</td></tr>
+        <tr><td>++</td><td>Increment</td></tr>
+        <tr><td>--</td><td>Decrement</td></tr>
+        <tr><td>==</td><td>Equality</td></tr>
+        <tr><td>!=</td><td>Not equal</td></tr>
+        <tr><td>&gt;</td><td>Greater than</td></tr>
+        <tr><td>&lt;</td><td>Less than</td></tr>
+        <tr><td>&gt;=</td><td>Greater than or equal</td></tr>
+        <tr><td>&lt;=</td><td>Less than or equal</td></tr>
+        <tr><td>&amp;&amp;</td><td>Logical AND</td></tr>
+        <tr><td>||</td><td>Logical OR</td></tr>
+        <tr><td>!</td><td>Logical NOT</td></tr>
+        <tr><td>=</td><td>Assignment</td></tr>
+        <tr><td>+=</td><td>Add and assign</td></tr>
+        <tr><td>-=</td><td>Subtract and assign</td></tr>
+      </table>
+    </div>
+
+    <!-- Section 5 -->
+    <div class="notes-section">
+      <h2>5. Commonly Used Classes</h2>
+      <table>
+        <tr><th>Class</th><th>Use</th></tr>
+        <tr><td>String</td><td>Working with text</td></tr>
+        <tr><td>Scanner</td><td>Input handling</td></tr>
+        <tr><td>Math</td><td>Math functions</td></tr>
+        <tr><td>ArrayList</td><td>Resizable array</td></tr>
+        <tr><td>HashMap</td><td>Key-value pairs</td></tr>
+        <tr><td>Date</td><td>Date/time operations</td></tr>
+      </table>
+    </div>
+
+    <!-- Back -->
+    <p style="margin-top:2rem; text-align:center;">
+      <a href="notes.html" class="btn btn-primary">⬅ Back to Notes</a>
+    </p>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand small">
+          <img src="assets/logo.svg" alt="Logo">
+          <span>Codcups</span>
+        </div>
+        <p>© <span id="year"></span> Codcups. Use your own content. Layout inspired for learning purposes.</p>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#tutorials">Tutorials</a></li>
+          <li><a href="#compilers">Compilers</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <ul>
+          <li><a href="#">GitHub</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

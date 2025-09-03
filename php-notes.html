@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Complete PHP Reference | Codcups</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .notes-container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+
+    .notes-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .notes-header h1 {
+      font-size: 2rem;
+      margin: .3rem 0;
+    }
+    .notes-header h1 span {
+      background: linear-gradient(90deg,var(--accentA),var(--accentB));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .notes-section {
+      margin-bottom: 2.5rem;
+    }
+    .notes-section h2 {
+      font-size: 1.4rem;
+      margin: 1rem 0 .6rem;
+      border-left: 4px solid var(--primaryB);
+      padding-left: .6rem;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      background: var(--panel);
+      border: 1px solid var(--outline);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: .75rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--outline);
+    }
+    th {
+      background: linear-gradient(90deg,var(--primaryA),var(--primaryB));
+      color: #08111f;
+      font-weight: 700;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    tr:nth-child(even) td {
+      background: rgba(255,255,255,.03);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.svg" alt="YourExperties logo">
+        <span>YourExperties</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+      <nav class="nav-links">
+        <a href="index.html#tutorials">Tutorials</a>
+        <a href="./notes.html">Notes</a>
+        <a href="index.html#compilers">Compilers</a>
+        <a href="index.html#features">Features</a>
+        <a href="about.html">About</a>
+        <a class="btn btn-cta" href="contact.html">Contact</a>
+        <a class="btn btn-primary" href="signup.html">Signup</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Notes Content -->
+  <div class="notes-container">
+    <div class="notes-header">
+      <h1><span>Complete PHP Reference</span></h1>
+      <p style="color:var(--muted)">
+        A quick reference for PHP covering tags, data types, keywords, superglobals, and common functions.
+      </p>
+    </div>
+
+    <!-- Section 1 -->
+    <div class="notes-section">
+      <h2>1. PHP Opening & Closing Tags</h2>
+      <table>
+        <tr><th>Tag</th><th>Description</th></tr>
+        <tr><td>&lt;?php ... ?&gt;</td><td>Standard PHP opening and closing tags</td></tr>
+        <tr><td>&lt;?= ... ?&gt;</td><td>Short tag for echoing</td></tr>
+        <tr><td>&lt;script language="PHP"&gt; ... &lt;/script&gt;</td><td>Not recommended (old-style PHP tag)</td></tr>
+      </table>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="notes-section">
+      <h2>2. PHP Data Types</h2>
+      <table>
+        <tr><th>Type</th><th>Description</th></tr>
+        <tr><td>int</td><td>Integer values</td></tr>
+        <tr><td>float (or double)</td><td>Decimal numbers</td></tr>
+        <tr><td>string</td><td>Text</td></tr>
+        <tr><td>bool</td><td>Boolean (true/false)</td></tr>
+        <tr><td>array</td><td>Arrays of values</td></tr>
+        <tr><td>object</td><td>Instance of a class</td></tr>
+        <tr><td>resource</td><td>Special resource type (e.g., DB connection)</td></tr>
+        <tr><td>NULL</td><td>No value</td></tr>
+      </table>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="notes-section">
+      <h2>3. PHP Keywords</h2>
+      <table>
+        <tr><th>Keyword</th><th>Description</th></tr>
+        <tr><td>echo</td><td>Output text</td></tr>
+        <tr><td>print</td><td>Output text (returns 1)</td></tr>
+        <tr><td>if</td><td>Conditional statement</td></tr>
+        <tr><td>else</td><td>Alternate block for if</td></tr>
+        <tr><td>elseif</td><td>Else-if conditional</td></tr>
+        <tr><td>switch</td><td>Switch-case logic</td></tr>
+        <tr><td>case</td><td>Listed inside switch</td></tr>
+        <tr><td>default</td><td>Default case in switch</td></tr>
+        <tr><td>while</td><td>Looping construct</td></tr>
+        <tr><td>do</td><td>Do-while loop</td></tr>
+        <tr><td>for</td><td>For loop</td></tr>
+        <tr><td>foreach</td><td>Loop for arrays</td></tr>
+        <tr><td>function</td><td>Define a function</td></tr>
+        <tr><td>return</td><td>Return from a function</td></tr>
+        <tr><td>global</td><td>Access global scope</td></tr>
+        <tr><td>static</td><td>Preserve variable state</td></tr>
+        <tr><td>var</td><td>Old way to declare variables</td></tr>
+        <tr><td>public</td><td>Public class member</td></tr>
+        <tr><td>private</td><td>Private class member</td></tr>
+        <tr><td>protected</td><td>Protected class member</td></tr>
+        <tr><td>class</td><td>Define a class</td></tr>
+        <tr><td>interface</td><td>Define interface</td></tr>
+        <tr><td>extends</td><td>Inheritance</td></tr>
+        <tr><td>implements</td><td>Interface implementation</td></tr>
+        <tr><td>const</td><td>Define constant</td></tr>
+        <tr><td>define()</td><td>Define constant function</td></tr>
+        <tr><td>include</td><td>Include file</td></tr>
+        <tr><td>require</td><td>Require file (fatal error if missing)</td></tr>
+        <tr><td>include_once</td><td>Include only once</td></tr>
+        <tr><td>require_once</td><td>Require only once</td></tr>
+        <tr><td>try</td><td>Try block for execution</td></tr>
+        <tr><td>catch</td><td>Catch block</td></tr>
+        <tr><td>finally</td><td>Always executed block</td></tr>
+        <tr><td>throw</td><td>Throw an exception</td></tr>
+        <tr><td>new</td><td>Create object</td></tr>
+        <tr><td>clone</td><td>Clone object</td></tr>
+        <tr><td>instanceof</td><td>Check object type</td></tr>
+        <tr><td>unset</td><td>Remove variable</td></tr>
+        <tr><td>isset</td><td>Check if set</td></tr>
+        <tr><td>empty</td><td>Check if empty</td></tr>
+        <tr><td>die / exit</td><td>Terminate script</td></tr>
+        <tr><td>declare</td><td>Set execution directives</td></tr>
+        <tr><td>yield</td><td>Return a value from a generator</td></tr>
+        <tr><td>GLOBALS</td><td>Access all global variables</td></tr>
+      </table>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="notes-section">
+      <h2>4. Common Superglobals</h2>
+      <table>
+        <tr><th>Superglobal</th><th>Purpose</th></tr>
+        <tr><td>$_GET</td><td>Access query string data</td></tr>
+        <tr><td>$_POST</td><td>Access form data (POST)</td></tr>
+        <tr><td>$_REQUEST</td><td>Access both GET and POST</td></tr>
+        <tr><td>$_SERVER</td><td>Server information</td></tr>
+        <tr><td>$_SESSION</td><td>Session variables</td></tr>
+        <tr><td>$_COOKIE</td><td>Cookie data</td></tr>
+        <tr><td>$_FILES</td><td>File upload data</td></tr>
+      </table>
+    </div>
+
+    <!-- Section 5 -->
+    <div class="notes-section">
+      <h2>5. PHP Common Functions</h2>
+      <table>
+        <tr><th>Function</th><th>Purpose</th></tr>
+        <tr><td>strlen()</td><td>Get string length</td></tr>
+        <tr><td>str_replace()</td><td>Replace string</td></tr>
+        <tr><td>substr()</td><td>Get part of string</td></tr>
+        <tr><td>array_push()</td><td>Add item to array</td></tr>
+        <tr><td>array_merge()</td><td>Merge arrays</td></tr>
+        <tr><td>explode()</td><td>Split string into array</td></tr>
+        <tr><td>implode()</td><td>Join array into string</td></tr>
+        <tr><td>isset()</td><td>Check if variable is set</td></tr>
+        <tr><td>empty()</td><td>Check if variable is empty</td></tr>
+        <tr><td>is_array()</td><td>Check if array</td></tr>
+        <tr><td>is_string()</td><td>Check if string</td></tr>
+        <tr><td>file_get_contents()</td><td>Read file to string</td></tr>
+        <tr><td>file_put_contents()</td><td>Write string to file</td></tr>
+        <tr><td>header()</td><td>Send raw HTTP headers</td></tr>
+        <tr><td>date()</td><td>Format datetime</td></tr>
+        <tr><td>time()</td><td>Unix timestamp</td></tr>
+        <tr><td>json_encode()</td><td>Convert to JSON</td></tr>
+        <tr><td>json_decode()</td><td>Convert from JSON</td></tr>
+      </table>
+    </div>
+
+    <!-- Back -->
+    <p style="margin-top:2rem; text-align:center;">
+      <a href="notes.html" class="btn btn-primary">⬅ Back to Notes</a>
+    </p>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand small">
+          <img src="assets/logo.svg" alt="Logo">
+          <span>YourExperties</span>
+        </div>
+        <p>© <span id="year"></span> YourExperties. Use your own content. Layout inspired for learning purposes.</p>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#tutorials">Tutorials</a></li>
+          <li><a href="#compilers">Compilers</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <ul>
+          <li><a href="#">GitHub</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

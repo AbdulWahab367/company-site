@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Complete Python Reference | Codcups</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .notes-container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    .notes-header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    .notes-header h1 {
+      font-size: 2rem;
+      margin: .3rem 0;
+    }
+    .notes-header h1 span {
+      background: linear-gradient(90deg,var(--accentA),var(--accentB));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .notes-section {
+      margin-bottom: 2.5rem;
+    }
+    .notes-section h2 {
+      font-size: 1.4rem;
+      margin: 1rem 0 .6rem;
+      border-left: 4px solid var(--primaryB);
+      padding-left: .6rem;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+      background: var(--panel);
+      border: 1px solid var(--outline);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    th, td {
+      padding: .75rem 1rem;
+      text-align: left;
+      border-bottom: 1px solid var(--outline);
+    }
+    th {
+      background: linear-gradient(90deg,var(--primaryA),var(--primaryB));
+      color: #08111f;
+      font-weight: 700;
+    }
+    tr:last-child td {
+      border-bottom: none;
+    }
+    tr:nth-child(even) td {
+      background: rgba(255,255,255,.03);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <img src="assets/logo.svg" alt="YourExperties logo">
+        <span>YourExperties</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle menu">☰</button>
+      <nav class="nav-links">
+        <a href="index.html#tutorials">Tutorials</a>
+        <a href="./notes.html">Notes</a>
+        <a href="index.html#compilers">Compilers</a>
+        <a href="index.html#features">Features</a>
+        <a href="about.html">About</a>
+        <a class="btn btn-cta" href="contact.html">Contact</a>
+        <a class="btn btn-primary" href="signup.html">Signup</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Notes Content -->
+  <div class="notes-container">
+    <div class="notes-header">
+      <h1><span>Complete Python Reference</span></h1>
+      <p style="color:var(--muted)">
+        Quick reference for Python programming covering keywords, data types, operators, built-in functions and constructs.
+      </p>
+    </div>
+
+    <!-- Section 1 -->
+    <div class="notes-section">
+      <h2>1. Python Keywords</h2>
+      <table>
+        <tr><th>Keyword</th><th>Description</th></tr>
+        <tr><td>False</td><td>Boolean false value</td></tr>
+        <tr><td>None</td><td>Represents null value</td></tr>
+        <tr><td>True</td><td>Boolean true value</td></tr>
+        <tr><td>and</td><td>Logical AND</td></tr>
+        <tr><td>as</td><td>Create an alias</td></tr>
+        <tr><td>assert</td><td>Debugging check</td></tr>
+        <tr><td>async</td><td>Declare async function</td></tr>
+        <tr><td>await</td><td>Wait result from coroutine</td></tr>
+        <tr><td>break</td><td>Exit the loop</td></tr>
+        <tr><td>class</td><td>Define a class</td></tr>
+        <tr><td>continue</td><td>Skip iteration</td></tr>
+        <tr><td>def</td><td>Define a function</td></tr>
+        <tr><td>del</td><td>Delete a variable</td></tr>
+        <tr><td>elif</td><td>Else if condition</td></tr>
+        <tr><td>else</td><td>Else condition</td></tr>
+        <tr><td>except</td><td>Exception handling</td></tr>
+        <tr><td>finally</td><td>Block after try/except</td></tr>
+        <tr><td>for</td><td>For loop</td></tr>
+        <tr><td>from</td><td>Import specific part</td></tr>
+        <tr><td>global</td><td>Declare global variable</td></tr>
+        <tr><td>if</td><td>If condition</td></tr>
+        <tr><td>import</td><td>Import module</td></tr>
+        <tr><td>in</td><td>Membership test</td></tr>
+        <tr><td>is</td><td>Object identity test</td></tr>
+        <tr><td>lambda</td><td>Anonymous function</td></tr>
+        <tr><td>nonlocal</td><td>Use outer variable in nested function</td></tr>
+        <tr><td>not</td><td>Logical NOT</td></tr>
+        <tr><td>or</td><td>Logical OR</td></tr>
+        <tr><td>pass</td><td>Do nothing</td></tr>
+        <tr><td>raise</td><td>Raise exception</td></tr>
+        <tr><td>return</td><td>Return from function</td></tr>
+        <tr><td>try</td><td>Try block</td></tr>
+        <tr><td>while</td><td>While loop</td></tr>
+        <tr><td>with</td><td>Context manager</td></tr>
+        <tr><td>yield</td><td>Return generator</td></tr>
+      </table>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="notes-section">
+      <h2>2. Python Data Types</h2>
+      <table>
+        <tr><th>Data Type</th><th>Description</th><th>Example</th></tr>
+        <tr><td>int</td><td>Integer number</td><td>x = 10</td></tr>
+        <tr><td>float</td><td>Decimal numbers</td><td>x = 3.14</td></tr>
+        <tr><td>complex</td><td>Complex numbers</td><td>x = 2 + 3j</td></tr>
+        <tr><td>bool</td><td>Boolean values</td><td>True or False</td></tr>
+        <tr><td>str</td><td>Text/Strings</td><td>"Hello"</td></tr>
+        <tr><td>list</td><td>Ordered, mutable list</td><td>[1, 2, 3]</td></tr>
+        <tr><td>tuple</td><td>Ordered, immutable list</td><td>(1, 2, 3)</td></tr>
+        <tr><td>set</td><td>Unordered, unique elements</td><td>{1, 2, 3}</td></tr>
+        <tr><td>dict</td><td>Key-value pairs</td><td>{"a": 1, "b": 2}</td></tr>
+        <tr><td>frozenset</td><td>Immutable set</td><td>frozenset({1,2})</td></tr>
+        <tr><td>bytes</td><td>Immutable byte sequence</td><td>b"data"</td></tr>
+        <tr><td>bytearray</td><td>Mutable byte sequence</td><td>bytearray(5)</td></tr>
+        <tr><td>NoneType</td><td>Represents null value</td><td>None</td></tr>
+      </table>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="notes-section">
+      <h2>3. Python Operators</h2>
+      <table>
+        <tr><th>Operator Type</th><th>Operation</th><th>Example</th></tr>
+        <tr><td>Arithmetic</td><td>+ - * / % ** //</td><td>a + b</td></tr>
+        <tr><td>Assignment</td><td>= += -= *= /=</td><td>x = 1</td></tr>
+        <tr><td>Comparison</td><td>== != &gt; &lt; &gt;= &lt;=</td><td>a == b</td></tr>
+        <tr><td>Logical</td><td>and, or, not</td><td>a and b</td></tr>
+        <tr><td>Membership</td><td>in, not in</td><td>x in list</td></tr>
+        <tr><td>Identity</td><td>is, is not</td><td>a is b</td></tr>
+        <tr><td>Bitwise</td><td>&amp; | ^ ~ &lt;&lt; &gt;&gt;</td><td>a &amp; b</td></tr>
+      </table>
+    </div>
+
+    <!-- Section 4 -->
+    <div class="notes-section">
+      <h2>4. Python Built-in Functions</h2>
+      <table>
+        <tr><th>Function</th><th>Description</th></tr>
+        <tr><td>print()</td><td>Prints output</td></tr>
+        <tr><td>input()</td><td>Takes user input</td></tr>
+        <tr><td>len()</td><td>Returns length</td></tr>
+        <tr><td>type()</td><td>Returns data type</td></tr>
+        <tr><td>range()</td><td>Returns a range of values</td></tr>
+        <tr><td>int()</td><td>Converts to integer</td></tr>
+        <tr><td>float()</td><td>Converts to float</td></tr>
+        <tr><td>str()</td><td>Converts to string</td></tr>
+        <tr><td>list()</td><td>Converts to list</td></tr>
+        <tr><td>tuple()</td><td>Converts to tuple</td></tr>
+        <tr><td>set()</td><td>Converts to set</td></tr>
+        <tr><td>dict()</td><td>Creates dictionary</td></tr>
+        <tr><td>sum()</td><td>Returns sum</td></tr>
+        <tr><td>min()</td><td>Minimum value</td></tr>
+        <tr><td>max()</td><td>Maximum value</td></tr>
+        <tr><td>sorted()</td><td>Returns sorted list</td></tr>
+        <tr><td>abs()</td><td>Absolute value</td></tr>
+        <tr><td>round()</td><td>Rounds number</td></tr>
+        <tr><td>enumerate()</td><td>Returns index and item</td></tr>
+        <tr><td>help()</td><td>Shows help info</td></tr>
+      </table>
+    </div>
+
+    <!-- Section 5 -->
+    <div class="notes-section">
+      <h2>5. Python Common Types & Constructs</h2>
+      <table>
+        <tr><th>Construct</th><th>Purpose</th><th>Example</th></tr>
+        <tr><td>if-else</td><td>Conditional logic</td><td>if x &gt; 5: print("Hi")</td></tr>
+        <tr><td>for loop</td><td>Loop over sequence</td><td>for i in list</td></tr>
+        <tr><td>while loop</td><td>Loop while condition true</td><td>while x &lt; 5</td></tr>
+        <tr><td>def</td><td>Function definition</td><td>def func():</td></tr>
+        <tr><td>class</td><td>Define class</td><td>class Person:</td></tr>
+        <tr><td>try-except</td><td>Error handling</td><td>try: ... except:</td></tr>
+        <tr><td>with</td><td>Context management</td><td>with open("file") as f</td></tr>
+        <tr><td>import</td><td>Import module</td><td>import math</td></tr>
+        <tr><td>lambda</td><td>Anonymous function</td><td>lambda x: x+1</td></tr>
+        <tr><td>return</td><td>Return value from function</td><td>return x</td></tr>
+        <tr><td>yield</td><td>Generate values</td><td>yield x</td></tr>
+      </table>
+    </div>
+
+    <!-- Back -->
+    <p style="margin-top:2rem; text-align:center;">
+      <a href="notes.html" class="btn btn-primary">⬅ Back to Notes</a>
+    </p>
+  </div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <div class="brand small">
+          <img src="assets/logo.svg" alt="Logo">
+          <span>Codcups</span>
+        </div>
+        <p>© <span id="year"></span> Codcups. Use your own content. Layout inspired for learning purposes.</p>
+      </div>
+      <div>
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="#tutorials">Tutorials</a></li>
+          <li><a href="#compilers">Compilers</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Follow</h4>
+        <ul>
+          <li><a href="#">GitHub</a></li>
+          <li><a href="#">LinkedIn</a></li>
+          <li><a href="#">Twitter</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
